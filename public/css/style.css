@@ -1,0 +1,326 @@
+/* --- General --- */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F7F7F7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+section {
+    animation: .5s ease-out 0s 1 slideInFromLeft;
+}
+
+.modal-footer {
+    padding: 10px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #253649;
+    border: 1px solid #253649;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.btn-primary img {
+    padding-left: 10px;
+    filter: invert(100%) sepia(22%) saturate(7%) hue-rotate(153deg) brightness(102%) contrast(102%);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #141e29;
+    border: 1px solid #141e29;
+}
+
+.btn-secondary {
+    background-color: #47688D;
+    border: 1px solid #47688D;
+    padding: 10px 20px;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: #364F6B;
+    border: 1px solid #364F6B;
+}
+
+.btn-back {
+    background-color: #D7D7D7;
+    border: 1px solid #D7D7D7;
+    color: black;
+    padding: 10px 20px;
+}
+
+.btn-back img {
+    padding-right: 10px;
+}
+
+/* --- Header --- */
+.header {
+    background-color: #47688D;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.header .logo {
+    color: white;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;
+}
+
+.header .icons img {
+    color: #FFFFFF;
+    filter: invert(100%) sepia(22%) saturate(7%) hue-rotate(153deg) brightness(102%) contrast(102%); /* CSS filter generator: https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+.header .icons .search {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.header .icons .list {
+    width: 35px;
+    height: 35px;
+}
+
+.header .icons .order {
+    position: relative;
+}
+
+.header .icons .order-count {
+    position: absolute;
+    top: -7px;
+    right: -10px;
+    border-radius: 50%;
+    padding: 2px 8px;
+    background: #FFFFFF;
+    color: #47688D;
+    text-align: center;
+    font-size: 12px;
+}
+
+.breadcrumb {
+    position: fixed;
+    top: 102px;
+    left: 15px;
+    z-index: 99;
+    background-color: #253649;
+    border-radius: 50%;
+}
+
+.breadcrumb .back {
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    filter: invert(100%) sepia(22%) saturate(7%) hue-rotate(153deg) brightness(102%) contrast(102%);
+}
+
+/* --- Tables --- */
+.table td, .table th {
+    vertical-align: middle;
+}
+
+/* --- Grid --- */
+.grid-btn {
+    width: 100%;
+    padding: 15px 10px 15px 10px;
+    border-radius: 5px;
+    text-align: left;
+    background-color: #47688D;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.grid-btn:hover {
+    background-color: #47688D;
+    color: white;
+}
+
+/* --- Products --- */
+.products {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.products .title {
+    margin: 0;
+    font-size: 16px;
+}
+
+.products .image img {
+    max-width: 75px;
+    min-width: 50px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.products tr {
+    background-color: #47688D;
+    color: #FFFFFF;
+}
+
+.products tr td {
+    color: #FFFFFF !important;
+}
+
+.products tr td:first-child {
+    border-left: 1px solid #47688D;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.products tr td:last-child {
+    border-right: 1px solid #47688D;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.products td, .products th {
+    vertical-align: middle;
+    border-top: 1px solid #47688D;
+    border-bottom: 1px solid #47688D;
+}
+
+.order-icon {
+    width: 35px;
+    height: 35px;
+    filter: invert(100%) sepia(22%) saturate(7%) hue-rotate(153deg) brightness(102%) contrast(102%);
+}
+
+.products .terms {
+    margin: 0;
+    font-size: 12px;
+}
+
+.products .term:not(:last-child)::after {
+    content: '-';
+    padding: 0px 5px;
+}
+
+/* --- Alerts --- */
+.alert {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: calc(100% - 20px);
+    margin: 10px;
+    animation: fadein 1s;
+    z-index: 9999;
+    display: block;
+}
+
+#alert.inactive {
+    opacity: 0;
+    animation: fadeout 1s;
+    display: none;
+}
+
+/* --- Animations --- */
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* --- Order --- */
+.table.order {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table.order tbody tr, .table.order tfoot tr {
+    background-color: #47688D;
+    color: #FFFFFF;
+}
+
+.table.order tbody tr td:first-child, .table.order tfoot tr td:first-child {
+    border-left: 1px solid #47688D;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.table.order tbody tr td:last-child, .table.order tfoot tr td:last-child {
+    border-right: 1px solid #47688D;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.table.order tbody td, .table.order tfoot td {
+    vertical-align: middle;
+    border-top: 1px solid #47688D;
+    border-bottom: 1px solid #47688D;
+    color: #FFFFFF;
+}
+
+.table.order .image img {
+    max-width: 50px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.table.order h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.table.order .icons img {
+    max-width: 35px;
+    width: 100%;
+    filter: invert(100%) sepia(22%) saturate(7%) hue-rotate(153deg) brightness(102%) contrast(102%);
+}
+
+.table.order .icons {
+    white-space: nowrap;
+}
+
+.td-small {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.table>:not(:first-child) {
+    border-top: none;
+}
+
+.order-icons .trash img {
+    max-width: 20px;
+    width: 100%;
+    filter: invert(100%) sepia(22%) saturate(7%) hue-rotate(153deg) brightness(102%) contrast(102%);
+}
+
+/* QR Modal */
+#QRModal .modal-body {
+    padding: 0px;
+}
+
+/* Spinner */
+.spinner-border-lg {
+    width: 45px;
+    height: 45px;
+    color: #253649;
+}
